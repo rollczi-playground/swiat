@@ -5,13 +5,7 @@ import java.util.Random;
 public class Kebab implements Turkable, Kebabable {
 
     private final Random random = new Random();
-
-    public static void main(String[] args) {
-        Kebab kebab = new Kebab();
-        kebab.jedzKebab();
-        kebab.rubKebab();
-    }
-
+    
     @Override
     public void jedzKebab() {
         boolean czyOstry = random.nextBoolean();
