@@ -15,8 +15,8 @@ public class Swiat implements Wlaczable {
         betoniarka.betonuj(new KomputerMatisa());
 
         Kebab kebab = new Kebab();
-        kebab.jedzKebab();
         kebab.rubKebab();
+        kebab.jedzKebab();
     }
 
     @Override
