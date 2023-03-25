@@ -2,10 +2,13 @@ package swiat.bulka;
 
 public class Bulka implements Bulkable {
 
-	private final boolean spalona;
-	private final boolean surowa;
+	private boolean spalona;
+	private boolean surowa;
 
-	public Bulka(boolean czySpalona, boolean czySurowa) {
+	public Bulka() {
+	}
+
+	protected Bulka(boolean czySpalona, boolean czySurowa) {
 		this.spalona = czySpalona;
 		this.surowa = czySurowa;
 		if (czySpalona && czySurowa) {
@@ -14,10 +17,10 @@ public class Bulka implements Bulkable {
 	}
 
 	@Override
-	public void jedz(Bulka bulka) {
-		if (bulka.spalona) {
+	public void jedz() {
+		if (this.spalona) {
 			System.out.println("bułka spalona, niedobra");
-		} else if (bulka.surowa) {
+		} else if (this.surowa) {
 			System.out.println("bułka surowa, niedobra");
 		} else {
 			System.out.println("bułka idealna, dobra");
