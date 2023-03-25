@@ -26,11 +26,12 @@ public class Bulka implements Bulkable {
 
 	@Override
 	public Bulka piecz(int stopnie, int czasWMinutach) {
+		int moc = stopnie * czasWMinutach;
 		System.out.println("Bulka piecze sie na " + stopnie + " stopni przez " + czasWMinutach + " minut");
-		if (czasWMinutach > 120) {
+		if (moc > 32400) {
 			System.out.println("Bułka spalona");
 			return new Bulka(true, false);
-		} else if (czasWMinutach <= 120 && czasWMinutach > 60) {
+		} else if (moc <= 32400 && moc > 12000) {
 			System.out.println("Bułka idealna");
 			return new Bulka(false, false);
 		} else {
