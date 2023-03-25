@@ -10,23 +10,23 @@ import swiat.wlaczable.Wlaczable;
 public class Swiat implements Wlaczable {
 
 
-	@Override
-	public void wlacz() {
-		Betoniarka betoniarka = new Betoniarka(new Beton(100));
-		betoniarka.betonuj(new KomputerMatisa());
+    @Override
+    public void wlacz() {
+        Betoniarka betoniarka = new Betoniarka(new Beton(100));
+        betoniarka.betonuj(new KomputerMatisa());
 
-		Kebab kebab = new Kebab();
-		kebab.rubKebab();
-		kebab.jedzKebab();
+        Kebab kebab = new Kebab();
+        kebab.rubKebab();
+        kebab.jedzKebab();
 
-		Bulka bulka = new Bulka();
-		bulka.piecz(100, 100);
-		bulka.jedz();
-	}
+        Bulka bulka = new Bulka();
+        bulka.pieczBulke(100, 100);
+        bulka.jedzBulke();
+    }
 
-	@Override
-	public void wylacz() {
+    @Override
+    public void wylacz() {
 
-	}
+    }
 
 }
