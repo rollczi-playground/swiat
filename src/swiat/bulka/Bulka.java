@@ -2,22 +2,19 @@ package swiat.bulka;
 
 public class Bulka implements Bulkable {
 
-	private final boolean spalona;
-	private final boolean surowa;
+	private boolean spalona;
+	private boolean surowa;
 
-	public Bulka(boolean czySpalona, boolean czySurowa) {
-		this.spalona = czySpalona;
-		this.surowa = czySurowa;
-		if (czySpalona && czySurowa) {
-			throw new IllegalStateException("Bułka nie może być jednocześnie spalona i surowa");
-		}
+	public Bulka() {
+		this.spalona = false;
+		this.surowa = true;
 	}
 
 	@Override
-	public void jedz(Bulka bulka) {
-		if (bulka.spalona) {
+	public void jedz() {
+		if (this.spalona) {
 			System.out.println("bułka spalona, niedobra");
-		} else if (bulka.surowa) {
+		} else if (this.surowa) {
 			System.out.println("bułka surowa, niedobra");
 		} else {
 			System.out.println("bułka idealna, dobra");
@@ -30,13 +27,19 @@ public class Bulka implements Bulkable {
 		System.out.println("Bulka piecze sie na " + stopnie + " stopni przez " + czasWMinutach + " minut");
 		if (moc > 32400) {
 			System.out.println("Bułka spalona");
-			return new Bulka(true, false);
+			this.spalona = true;
+			this.surowa = false;
+			return this;
 		} else if (moc <= 32400 && moc > 12000) {
 			System.out.println("Bułka idealna");
-			return new Bulka(false, false);
+			this.surowa = false;
+			this.spalona = false;
+			return this;
 		} else {
 			System.out.println("Surowa bułka");
-			return new Bulka(false, true);
+			this.surowa = true;
+			this.spalona = false;
+			return this;
 		}
 	}
 }
