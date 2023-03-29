@@ -40,6 +40,6 @@ public class Bulka implements Betonable {
 
     @Override
     public void betonuj(Beton beton) {
-        System.out.println("Betonuję bułkę z " + beton.getIloscBetonu() + " betonu");
+        System.out.println("Betonuję bułkę z " + beton.getIloscBetonu() + " litrów betonu");
     }
 }
