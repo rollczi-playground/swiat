@@ -14,7 +14,8 @@ public class Kebab extends Bulka implements Turkable, Kebabable {
 
         if (czyOstry) {
             System.out.println("kebabowa moc pali dupe");
-        } else {
+        } 
+        else {
             System.out.println("Moc energia kebaba z baranina!");
         }
     }
