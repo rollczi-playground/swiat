@@ -22,7 +22,7 @@ public class Kebab extends Bulka implements Turkable, Kebabable {
 
     @Override
     public void rubKebab() {
-        String[] mienso = {"baranina", "kurczak", "wołowina"};
+        String[] mienso = { "baranina", "kurczak", "wołowina" };
         int randomIndex = random.nextInt(mienso.length);
         String meat = mienso[randomIndex];
 
