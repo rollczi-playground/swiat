@@ -8,3 +8,4 @@ Klasy bazowe:
 - `Betonable`
 - `Kebabable`
 - `Turkable`
+- `Rybable`

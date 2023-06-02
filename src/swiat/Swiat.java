@@ -5,6 +5,7 @@ import swiat.beton.Betoniarka;
 import swiat.beton.KomputerMatisa;
 import swiat.bulka.Bulka;
 import swiat.kebab.Kebab;
+import swiat.rybable.Psotka;
 import swiat.wlaczable.Wlaczable;
 
 public class Swiat implements Wlaczable {
@@ -22,6 +23,9 @@ public class Swiat implements Wlaczable {
         Bulka bulka = new Bulka();
         bulka.pieczBulke(100, 100);
         bulka.jedzBulke();
+
+        Psotka psotka = new Psotka();
+        psotka.bulbul();
     }
 
     @Override
